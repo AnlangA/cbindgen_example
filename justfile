@@ -1,5 +1,5 @@
 path := "../../target/debug"
-CC := "cc"
+CC := "clang"
 
 #<package> is the rust package. example: you can test the "add" package by "just run add"
 run package:

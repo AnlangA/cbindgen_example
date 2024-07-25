@@ -1,2 +1,5 @@
 /target
 *.h
+*.a
+*.so
+main
