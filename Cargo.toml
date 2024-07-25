@@ -1,6 +1,5 @@
 [workspace]
 resolver = "2"
 members = [
-    "add", 
-    "simple_hello",
+    "rust/*",
 ]

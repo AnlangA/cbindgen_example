@@ -7,6 +7,6 @@ run package:
     set -euxo pipefail
     
     cargo build -p {{package}}
-    cd A_c_call_rust/{{package}}
+    cd c/{{package}}
     {{CC}} main.c -L{{path}} -l{{package}} -o main
     ./main
