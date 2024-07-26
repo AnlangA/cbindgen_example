@@ -1,7 +1,7 @@
 #include "libc_data.h"
 
-int main(){
-    struct libc_data data = {1};
+int main() {
+    libc_data data = init_libc_data();
     print_libc_data(data);
     return 0;
 }

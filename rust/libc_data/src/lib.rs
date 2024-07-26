@@ -20,18 +20,18 @@ pub struct libc_data {
 impl libc_data {
     pub fn new() -> Self {
         Self {
-            char_: 0,
-            schar_: 0,
-            uchar_: 0,
-            float_: 0.0,
-            double_: 0.0,
-            short_: 0,
-            int_: 0,
-            long_: 0,
-            longlong_: 0,
-            ushort_: 0,
-            ulong_: 0,
-            ulonglong_: 0,
+            char_: 127,          // c_char 类型可以直接赋值为 150
+            schar_: 127,         // c_schar 类型可以直接赋值为 150
+            uchar_: 150,         // c_uchar 类型可以直接赋值为 150
+            float_: 150.0,       // c_float 类型可以直接赋值为 150.0
+            double_: 150.0,      // c_double 类型可以直接赋值为 150.0
+            short_: 150,         // c_short 类型可以直接赋值为 150
+            int_: 150,           // c_int 类型可以直接赋值为 150
+            long_: 150,          // c_long 类型可以直接赋值为 150
+            longlong_: 150,      // c_longlong 类型可以直接赋值为 150
+            ushort_: 150,        // c_ushort 类型可以直接赋值为 150
+            ulong_: 150,         // c_ulong 类型可以直接赋值为 150
+            ulonglong_: 150,     // c_ulonglong 类型可以直接赋值为 150
         }
     }
 }
@@ -56,4 +56,9 @@ impl fmt::Display for libc_data {
 #[no_mangle]
 pub extern "C" fn print_libc_data(data: libc_data) {
     println!("{}", data);
+}
+
+#[no_mangle]
+pub extern "C" fn init_libc_data() -> libc_data {
+    libc_data::new()
 }
