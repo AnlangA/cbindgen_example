@@ -10,5 +10,5 @@ fn main() {
       .with_crate(crate_dir)
       .generate()
       .expect("Unable to generate pointer_hello")
-      .write_to_file("../c/pointer_hello/pointer_hello.h");
+      .write_to_file("../../c/pointer_hello/pointer_hello.h");
 }

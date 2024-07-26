@@ -10,5 +10,5 @@ fn main() {
       .with_crate(crate_dir)
       .generate()
       .expect("Unable to generate simple_hello")
-      .write_to_file("../c/simple_hello/simple_hello.h");
+      .write_to_file("../../c/simple_hello/simple_hello.h");
 }
